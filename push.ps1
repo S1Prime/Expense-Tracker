@@ -1,4 +1,4 @@
-﻿param(
+param(
     [string]$Message = "Update $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
 )
 

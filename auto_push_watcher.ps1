@@ -1,4 +1,4 @@
-﻿# Auto-Push Watcher: Automatically commits and pushes whenever files change
+# Auto-Push Watcher: Automatically commits and pushes whenever files change
 Write-Host "=============================================" -ForegroundColor Cyan
 Write-Host "  Expense-Tracker Automatic Push Watcher    " -ForegroundColor Cyan
 Write-Host "=============================================" -ForegroundColor Cyan
