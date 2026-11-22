@@ -1,12 +1,4 @@
-export interface Category {
-  id: string;
-  name: string;
-  icon?: string | null;
-  color?: string | null;
-  budgetLimit?: number | null;
-  createdAt: Date | string;
-  updatedAt: Date | string;
-}
+import type { Category } from "./category";
 
 export type PaymentMethod =
   | "CASH"
@@ -30,16 +22,6 @@ export interface Expense {
   userId?: string | null;
   createdAt: Date | string;
   updatedAt: Date | string;
-}
-
-export interface Budget {
-  id: string;
-  month: number;
-  year: number;
-  amount: number;
-  categoryId?: string | null;
-  category?: Category | null;
-  userId?: string | null;
 }
 
 export interface ExpenseSummary {
