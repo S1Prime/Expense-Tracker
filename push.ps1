@@ -10,7 +10,7 @@ $status = git status --porcelain
 if ($status) {
     git commit -m "$Message"
     git push origin main
-    Write-Host "[✓] Changes pushed successfully to GitHub!" -ForegroundColor Green
+    Write-Host "[OK] Changes pushed successfully to GitHub!" -ForegroundColor Green
 } else {
-    Write-Host "[i] No new changes to push." -ForegroundColor Yellow
+    Write-Host "[INFO] No new changes to push." -ForegroundColor Yellow
 }

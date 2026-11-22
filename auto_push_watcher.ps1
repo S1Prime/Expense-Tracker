@@ -15,7 +15,7 @@ $script:lastPush = [DateTime]::MinValue
 
 $action = {
     $itemPath = $Event.SourceEventArgs.FullPath
-    if ($itemPath -like "*\.git*") { return }
+    if ($itemPath -like "*\.git*" -or $itemPath -like "*\node_modules*" -or $itemPath -like "*\.next*") { return }
 
     # Debounce events within 3 seconds
     $now = Get-Date
@@ -29,7 +29,7 @@ $action = {
         $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
         git -C $folder commit -m "Auto-commit: $timestamp"
         git -C $folder push origin main
-        Write-Host "[$timestamp] [✓] Automatically committed and pushed changes." -ForegroundColor Green
+        Write-Host "[$timestamp] [OK] Automatically committed and pushed changes." -ForegroundColor Green
     }
 }
 
